@@ -441,5 +441,8 @@ export default function Component() {
         </nav>
       </footer>
     </div>
+    <script>
+      form.addEventListener('submit', async (e) => { e.preventDefault(); })
+    </script>
   )
 }
