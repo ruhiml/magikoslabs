@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle, Code, Cog, Globe, Mail, Phone, Zap, Users, Clock, TrendingUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import ContactCard from '../app/ContactCard';
 
 export default function Component() {
   return (
@@ -383,41 +384,7 @@ export default function Component() {
                   <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <form method="POST" action="/api/contact" onSubmit={handleSubmit}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">First name</label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="John" name="fname"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label className="text-sm font-medium">Last name</label>
-                      <input
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                        placeholder="Doe" name="lname"
-                      />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Email</label>
-                    <input
-                      className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                      placeholder="john@example.com"
-                      type="email" name="email"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <label className="text-sm font-medium">Message</label>
-                    <textarea
-                      className="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-                      placeholder="Tell us about your project..." name="message"
-                    />
-                  </div>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">Send Message</Button>
-
-                  </form>
+                  <ContactCard />
                 </CardContent>
               </Card>
             </div>
