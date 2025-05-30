@@ -9,6 +9,11 @@ export default async function handler(req, res) {
 
   const { fname, lname, email, message } = req.body;
 
+  const handleSubmit = (e) => {
+		e.preventDefault();
+			resetForm();
+	};
+
   try {
     const data = await resend.emails.send({
       from: 'ruhi@magikoslabs.com',
@@ -26,4 +31,6 @@ export default async function handler(req, res) {
     console.error('Email sending failed:', error);
     return res.status(500).json({ error: 'Failed to send message' });
   }
+
+
 }

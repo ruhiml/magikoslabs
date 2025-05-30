@@ -383,7 +383,7 @@ export default function Component() {
                   <CardDescription>Fill out the form below and we'll get back to you within 24 hours.</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <form method="POST" action="/api/contact">
+                  <form method="POST" action="/api/contact" onSubmit={handleSubmit}>
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <label className="text-sm font-medium">First name</label>
