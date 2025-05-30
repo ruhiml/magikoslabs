@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle, Code, Cog, Globe, Mail, Phone, Zap, Users, Clock, TrendingUp } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import ContactCard from '../app/ContactCard';
+import ContactCard from '@/components/ui/ContactCard';
 
 export default function Component() {
   return (
